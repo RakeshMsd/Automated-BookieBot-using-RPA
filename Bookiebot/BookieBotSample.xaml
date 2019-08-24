@@ -1,0 +1,141 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="BookieBotSample" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="BookieBotSample_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="BookieBotSample" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <ui:FindText UiElement="{x:Null}" DisplayName="Find Text Position 'WhatsApp.exe Chrome'" FormattedText="False" sap2010:WorkflowViewState.IdRef="FindText_1" Occurrence="1" Text="Hey">
+      <ui:FindText.Target>
+        <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7e6fb41de7da34dc693258d90504c18a" Selector="&lt;wnd app='whatsapp.exe' omit:cls='Chrome_WidgetWin_1' title='WhatsApp' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;" WaitForReady="COMPLETE">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="72, 168, 271, 33" />
+          </ui:Target.ClippingRegion>
+        </ui:Target>
+      </ui:FindText.Target>
+    </ui:FindText>
+    <WriteLine DisplayName="Write Line" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="hey" />
+    <Sequence DisplayName="Image">
+      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'WhatsApp Chrome_wi'" InformativeScreenshot="849e5ef6a4f0bef88febbef4a039ad64" Selector="&lt;wnd app='whatsapp.exe' cls='Chrome_WidgetWin_1' title='WhatsApp' /&gt;&lt;wnd cls='Intermediate D3D Window' /&gt;">
+        <ui:WindowScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do">
+              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'WhatsApp.exe'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                <ui:ClickImage.CursorPosition>
+                  <ui:CursorPosition OffsetX="0" OffsetY="0" Position="Center" />
+                </ui:ClickImage.CursorPosition>
+                <ui:ClickImage.Image>
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAZCAYAAABZ5IzrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVEhL7ZRPqwFRGIfvd7L2DWzGTikpJTVlMWJrwcoHkKUSOylFFhZWUhaSZqGmxoKNEimh4af3zdG4zXV0ou5injrNnHPmzzPv721+8M/whWT4QjJ8IRlPQsfjEcVikQedu+l0OtB1Hdvt9r7yHXwhGcpCjuOg1+shFoshGAwil8thsVjgcDggn8+jVCrhdDrxtXSkuXvtLzyFAoGA5xBC1+sV3W4XmqZhMBhgtVqhUCiw1G63Q6vVYtHlcsnPtW0b0WgUo9GI56/wFDIMA8PhEOPx+DEqlcpDiF6aTqdRq9VYjjBNE6FQCNPplEVIqN/v8x5VN5PJ8H0ylCKjL45EIp5VnEwmuFwuKJfLHBFJ0PPc8q9QEnJXiObucT6f+frZbIZkMsmRJhIJWJbF6zKUhKgC1WqVq0Qv3Gw2mM/n3Dvivv1+j2w2i3g8/lYzC5SECNpvNBoIh8McFfVMu91mWQEJ0p7opXd4Evok1C/NZhOpVArr9fq+KucrQhQXRUmR1uv1t5pZ8HEhETv9Akjmd/QyvhaZKr6QDF/oNcANWXFVBbulGxYAAAAASUVORK5CYII=" />
+                </ui:ClickImage.Image>
+                <ui:ClickImage.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                </ui:ClickImage.Target>
+                <sap2010:WorkflowViewState.IdRef>ClickImage_1</sap2010:WorkflowViewState.IdRef>
+              </ui:ClickImage>
+              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'WhatsApp.exe'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                <ui:ClickImage.CursorPosition>
+                  <ui:CursorPosition OffsetX="264" OffsetY="10" Position="TopRight" />
+                </ui:ClickImage.CursorPosition>
+                <ui:ClickImage.Image>
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAVCAYAAAAq05ytAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGaSURBVEhL7ZRPqwFhFIfvd7L2DWzYKSWlpKYsiK0Fq/kAslQyOylFFhZWUhaSLJQaCzZKpGSmGb/bOXmn6bJw7qXuYp56m3n/P3POab7wTwnEpARiUgIxKZ7Y9XpFtVrlRu9+er0eNE3D8Xi8j3yeQEzKr8Qcx8FgMEAymUQ4HEapVMJms8HlckG5XIau67Asi9fSk/r+sVd4EAuFQk+bErvdbuj3+4hGoxiNRtjtdqhUKix3Op3Q6XRYeLvd8rmmaSKRSGAymXD/VR7E8vk8xuMxptOp1+r1uidGl+dyOTSbTZYklsslIpEI5vM5C5HYcDjkOYp2oVDgfRLEqaQIxOPxp1GdzWZwXRe1Wo1TRzJ0nv8jXkUs5o8Y9f3Ntm1ev1gskMlkONXpdBrr9ZrHJYjFKCKNRoOjRhcfDgesViuuLbXvfD6jWCwilUqJi14hFiNo3jAMxGIxTiHVVLfbZWkFidKcqjUpntg7oXpqt9vIZrPY7/f3URlvF6M0Uoop1a1WS1z0ireKqXKgXwdJ/SwJCR9J5d8BvgGmXb5/K8O6nwAAAABJRU5ErkJggg==" />
+                </ui:ClickImage.Image>
+                <ui:ClickImage.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                </ui:ClickImage.Target>
+                <sap2010:WorkflowViewState.IdRef>ClickImage_2</sap2010:WorkflowViewState.IdRef>
+              </ui:ClickImage>
+              <sap2010:WorkflowViewState.IdRef>Sequence_6</sap2010:WorkflowViewState.IdRef>
+            </Sequence>
+          </ActivityAction>
+        </ui:WindowScope.Body>
+        <sap2010:WorkflowViewState.IdRef>WindowScope_3</sap2010:WorkflowViewState.IdRef>
+      </ui:WindowScope>
+      <sap2010:WorkflowViewState.IdRef>Sequence_7</sap2010:WorkflowViewState.IdRef>
+    </Sequence>
+    <sads:DebugSymbol.Symbol>dztDOlxVc2Vyc1xocFxEb2N1bWVudHNcVWlQYXRoXEJvb2tpZWJvdFxCb29raWVCb3RTYW1wbGUueGFtbBM5A20OAgEBOgVCEwIBEEMFQ2QCAQ5EBWsQAgECPH48+gECARM6tQE6ugECARI6rAE6rwECARFDXENhAgEPRQdpGAIBA0XlAUXcAgIBDUsNZRgCAQRMD1cfAgEJWA9jHwIBBVE9UUICAQxOLk4xAgEKTjpOPQIBC109XUICAQhaLlozAgEGWjxaQAIBBw==</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="FindText_1" sap:VirtualizedContainerService.HintSize="436,134" />
+      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="436,61" />
+      <sap2010:ViewStateData Id="ClickImage_1" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="ClickImage_2" sap:VirtualizedContainerService.HintSize="314,106" />
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="336,376">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WindowScope_3" sap:VirtualizedContainerService.HintSize="414,522" />
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="436,646">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="458,1045">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="BookieBotSample_1" sap:VirtualizedContainerService.HintSize="498,1165" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
