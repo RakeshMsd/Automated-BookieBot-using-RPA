@@ -1,0 +1,2 @@
+# Automated-BookieBot-using-RPA
+The project  Automated Bookieot using RPA contains all types of ticket booking in one website. Unless like in the previous stage people as to walk into travel agency company to buy the tickets and also to check the timings. This problem is to overcome Online Ticket Booking System. This project will provide an option to customers to book the tickets through whatsapp and to get the confirmation in Whatsapp. Using this system customer can book flight tickets,Train tickets and they can book or reserve hotels in future. 
